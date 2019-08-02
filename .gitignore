@@ -1,3 +1,9 @@
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
+
 # Compiled source #
 ############
 *.com
@@ -6,7 +12,7 @@
 *.exe
 *.o
 *.so
-*.bat
+
 # Packages #
 ############
 *.7z
@@ -17,9 +23,11 @@
 *.rar
 *.tar
 *.zip
+
 # Logs and databases #
 ############
 *.log
+
 # OS generated files #
 ############
 .DS_Store
@@ -29,18 +37,11 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+
 # Java and Gradle #
 ############
 build/
 .gradle/
-out/
-out
-.gradle
-gradle
-gradlew.bat
-gradlew
-settings.gradle
-# IntelliJ #
-############
-.idea
-.idea/
+
+!gradle-wrapper.jar
+
