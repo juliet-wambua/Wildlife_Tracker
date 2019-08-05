@@ -38,7 +38,7 @@ public class Animal extends AnimalsAbstract  {
     }
     @Override
     public boolean equals(Object otherAnimal){
-        if(!(otherAnimal instanceof Object)){
+        if(otherAnimal == null){
             return false;
         }
         AnimalsAbstract myAnimal = (AnimalsAbstract) otherAnimal;
