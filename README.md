@@ -3,7 +3,7 @@
 #### By Juliet Wambua
 
 ## Description
-This an application by the Forest Service that helps Rangers to track Wildlife sightings in Douglas Fir forest because they want to clear it. The rangers are supposed to report sightings of any animal they see and the location.
+This an application to the Forest Service that helps Rangers to track Wildlife sightings in Douglas Fir forest because they want to clear it. The rangers are supposed to report sightings of any animal they see and the location.
 
 ## Project setup instructions
 * Make sure you have all the Requirements of running Java apps installed such as JUnit, intellij, SDK, JDK.
