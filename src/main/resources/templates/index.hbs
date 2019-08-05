@@ -1,15 +1,20 @@
-{{#partial content}}
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 big5">
+{{#partial "styles"}}
+    <link rel='stylesheet' href='/css/index.css'>
+{{/partial}}
 
-            </div>
+{{#partial "content"}}
+    <div class="background">
 
-            <div class="col-md-6 others">
+    <div class=" ">
 
-            </div>
+        <h1>Welcome to our Wildlife-Tracker website. </h1>
         </div>
+        <hr>
+
+    <div class="button-all">
+        <a href="/form" class="btn btn-half">Record animal sighting</a>
 
     </div>
+    </div>
 {{/partial}}
-{{> layout.hbs}}
+{{>layout.hbs}}

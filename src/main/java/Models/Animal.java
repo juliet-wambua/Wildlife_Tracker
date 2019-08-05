@@ -48,7 +48,7 @@ public class Animal extends AnimalsAbstract  {
 
     }
     public static List<Animal> all(){
-        String sql = "SELECT * FROM animal WHERE type='safe'";
+        String sql = "SELECT * FROM animal WHERE type='Big5'";
         try(Connection con = DB.sql2o.open()) {
             return con.createQuery(sql).executeAndFetch(Animal.class);
         }

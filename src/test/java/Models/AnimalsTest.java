@@ -21,32 +21,32 @@ public class AnimalsTest {
 
     @Test
     public void animal_InstantiatesCorrectly_true(){
-        Animal myAnimal = new Animal("panther","young","weak","");
+        Animal myAnimal = new Animal("Elephant","young","weak","");
         assertEquals(true, myAnimal instanceof Animal);
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void animal_InstantiatesWithName_panther(){
         Animal myAnimal = new Animal("","","","");
-        assertEquals("panther", myAnimal.getName());
+        assertEquals("Elephant", myAnimal.getName());
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void animal_InstantiatesWithAge_panther(){
         Animal myAnimal = new Animal("","","","");
-        assertEquals("panther", myAnimal.getAge());
+        assertEquals("Elephant", myAnimal.getAge());
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void animal_InstantiatesWithHealth_panther(){
         Animal myAnimal = new Animal("","","","");
-        assertEquals("panther", myAnimal.getHealth());
+        assertEquals("Elephant", myAnimal.getHealth());
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void animal_InstantiatesWithType_panther(){
         Animal myAnimal = new Animal("","","","");
-        assertEquals("panther", myAnimal.getType());
+        assertEquals("Elephant", myAnimal.getType());
     }
 
 
@@ -61,16 +61,17 @@ public class AnimalsTest {
     public void animal_InstantiatesWithHealth_Weak(){
         Animal myAnimal = new Animal("","","","");
     }
+
     @Test
     public void animal_IsSavedInDatabase(){
-        Animal myAnimal = new Animal("panther", "adult", "healthy","safe");
+        Animal myAnimal = new Animal("Elephant", "adult", "healthy","safe");
         myAnimal.save();
         assertTrue(Animal.all().get(0).equals(myAnimal));
     }
     //Test to check if all instances of regular animals are made
     @Test
     public void animal_AllInstancesOfAnimalAreReturned_True(){
-        Animal myAnimal1 = new Animal("panther", "young","healthy","safe");
+        Animal myAnimal1 = new Animal("Elephant", "young","healthy","safe");
         myAnimal1.save();
         Animal myAnimal2 = new Animal("puma","mature","healthy","safe");
         myAnimal2.save();
@@ -79,7 +80,7 @@ public class AnimalsTest {
     }
     //Animal is assigined an Id
     @Test
-    public void animal_AnimalIsAssingnedAnID_getid(){
+    public void animal_AnimalIsAssingnedAnID_getId(){
         Animal myAnimal = new Animal("puma","young","healthy","safe");
         myAnimal.save();
         Animal testAnimalia = Animal.all().get(0);
@@ -87,8 +88,9 @@ public class AnimalsTest {
     }
 
     //Test to find Animal with the Same Id
+    @Test
     public void find_WillReturnAnimalWithTheSame_SecondAnimal(){
-        Animal firstAnimal = new Animal("panther","mature","healthy","safe");
+        Animal firstAnimal = new Animal("Elephant","mature","healthy","safe");
         firstAnimal.save();
         Animal secondAnimal = new Animal("puma","young","healthy","safe");
         secondAnimal.save();

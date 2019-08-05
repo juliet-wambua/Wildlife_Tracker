@@ -51,23 +51,23 @@ public class EndangeredTest {
     //Test to find Animal with the Same Id
     @Test
     public void find_WillReturnEndangeredAnimalWithTheSame_SecondAnimal(){
-        Endangered firstEndangeredAnimal = new Endangered("panther", "adult", "healthy","endangered");
+        Endangered firstEndangeredAnimal = new Endangered("Elephant", "adult", "healthy","endangered");
         firstEndangeredAnimal.save();
-        Endangered SecondEndangeredAnimal = new Endangered("panther", "adult", "healthy","endangered");
+        Endangered SecondEndangeredAnimal = new Endangered("Elephant", "adult", "healthy","endangered");
         SecondEndangeredAnimal.save();
         assertEquals(Endangered.find(SecondEndangeredAnimal.getId()), SecondEndangeredAnimal);
     }
     //Animal is assigined an Id
     @Test
     public void EndangeredAnimal_AnimalIsAssignedAnID_getId(){
-        Endangered myEndangeredAnimal = new Endangered("panther", "adult", "healthy","endangered");
+        Endangered myEndangeredAnimal = new Endangered("Elephant", "adult", "healthy","endangered");
         myEndangeredAnimal.save();
         Endangered testEndangeredAnimals = Endangered.all().get(0);
         assertEquals(myEndangeredAnimal.getId(), testEndangeredAnimals.getId());
     }
     @Test
     public void EndangeredAnimal_AllInstancesOfAnimalAreReturned_True(){
-        Endangered myEndangeredAnimal1 = new Endangered("panther", "adult", "healthy","endangered");
+        Endangered myEndangeredAnimal1 = new Endangered("Elephant", "adult", "healthy","endangered");
         myEndangeredAnimal1.save();
         Endangered myEndangeredAnimal2 = new Endangered("Black Rhino", "adult", "healthy","endangered");
         myEndangeredAnimal2.save();

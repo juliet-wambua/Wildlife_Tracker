@@ -6,10 +6,10 @@ import org.sql2o.Sql2o;
 
 import static org.junit.Assert.assertEquals;
 
-public class DatabaseRules extends ExternalResource {
+public class DatabaseRule extends ExternalResource {
     @Override
     protected void before() {
-        DB.sql2o = new Sql2o("jdbc:postgresql://localhost:5432/wildlife_tracker_test", "postgres", "Bus-242-001/2014");
+        DB.sql2o = new Sql2o("jdbc:postgresql://localhost:5432/wildlife_tracker_test", "moringaschool", "  ");
     }
 
     @Override
