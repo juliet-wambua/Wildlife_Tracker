@@ -2,22 +2,30 @@
 
 #### By Juliet Wambua
 
-## Description
-Wildlife_Tracker as the name suggests is an application that tracks animals. It has a list of endangered animals. One is supposed to report when they see an any animal or endangered animal by posting in the Wildlife_Tracker app. They name the animal, the place or the sighting location and their name.
+##Project setup instructions
+* Make sure you have all the Requirements of running Java apps installed such as JUnit, intellij, SDK, JDK.
 
-## Setup/Installation Requirements
-* Change directory to Wildlife_Tracker
-* Open browser
+* Clone the project into your machine from https://github.com/juliet-wambua/Wildlife_Tracker.git .
+
+* Gradle run javac Wildlife-Tracker2.java to compile and java wildlife tracker to run the program
+
+##Specs
+* Rangers can add their names so that they can be identified.
+* Ranger adds a zone where the sighting was made.
+* Ranger adds the name of the animal they sighted.
+* Ranger adds the suspected age of the animal.
+* Ranger adds the suspected health of the animal.
+* Ranger adds species of the animal whether endangered or not endangered
+* A timestamp is created by the database to record time of sighting
+
+##Technologies
+* Junit
+* Java
+* Spark
+* postgres
 
 ## Known Bugs
 No known bugs
-
-## Technologies Used
-* HTML
-* CSS
-* JavaScript
-* J query
-*Java
 
 ## Support and contact details
 For more information E-mail julienea289@gmail.com

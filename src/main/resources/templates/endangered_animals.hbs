@@ -1,0 +1,25 @@
+<div class="row my-list">
+    <div class="col col-sm-6">
+        <h3 class="align">Non-Endangered Animals</h3>
+        {{#if}}
+           non-endangered.size() >0
+             <div class="lis-group ul">
+                {{#foreach}}
+                    not-endangered animal in non-endangered
+                    <a href="" class="list-group-item list-group-item-action list-group-item-dark">no-endangered_animal.getName()</a>
+                {{/foreach}}
+            </div>
+        {{/if}}
+
+       {{#else}}-->
+        <h5>No saved Animals Yet!</h5>
+        {{/else}}
+    </div>
+
+    <div class="col col-sm-6">
+        <h3 class="align">Endangered Animals</h3>
+        {{#if}}
+
+        {{/if}}
+    </div>
+</div>
