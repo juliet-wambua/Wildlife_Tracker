@@ -2,6 +2,8 @@
 
 #### By Juliet Wambua
 
+##Description
+This an application by the Forest Service that helps Rangers to track Wildlife sightings in Douglas Fir forest because they want to clear it. The rangers are supposed to report sightings of any animal they see and the location.
 ##Project setup instructions
 * Make sure you have all the Requirements of running Java apps installed such as JUnit, intellij, SDK, JDK.
 
@@ -9,7 +11,7 @@
 
 * Gradle run javac Wildlife-Tracker2.java to compile and java wildlife tracker to run the program
 
-##Specs
+## Specs
 * Rangers can add their names so that they can be identified.
 * Ranger adds a zone where the sighting was made.
 * Ranger adds the name of the animal they sighted.
@@ -17,8 +19,8 @@
 * Ranger adds the suspected health of the animal.
 * Ranger adds species of the animal whether endangered or not endangered
 * A timestamp is created by the database to record time of sighting
-
-##Technologies
+ 
+## Technologies
 * Junit
 * Java
 * Spark
