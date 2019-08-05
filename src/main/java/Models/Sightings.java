@@ -42,7 +42,7 @@ public class Sightings implements AnimalInterface{
         return timestamp;
     }
     public AnimalsAbstract getAnimal() {
-        String sql = "SELECT * FROM animal WHERE id = :id";
+        String sql = "SELECT * FROM animals WHERE id = :id";
         try(Connection con = DB.sql2o.open()){
             AnimalsAbstract myAnimal = con.createQuery(sql)
                     .addParameter("id",this.animalId)
@@ -53,7 +53,7 @@ public class Sightings implements AnimalInterface{
 
     public void save() {
         try (Connection con = DB.sql2o.open()) {
-            String sql = "INSERT INTO sighting (name, location, animalId, timestamp) VALUES (:name, :location, :animalId, now());";
+            String sql = "INSERT INTO sightings (name, location, animalId, timestamp) VALUES (:name, :location, :animalId, now());";
             this.id = (int) con.createQuery(sql, true)
                     .addParameter("name", this.name)
                     .addParameter("location", this.location)
@@ -73,13 +73,13 @@ public class Sightings implements AnimalInterface{
                 this.getId()==myAnimal.getId() ;
     }
     public static List<Sightings> all(){
-        String sql = "SELECT * FROM sighting;";
+        String sql = "SELECT * FROM sightings;";
         try(Connection con = DB.sql2o.open()) {
             return con.createQuery(sql).executeAndFetch(Sightings.class);
         }
     }
     public static Sightings find(int id){
-        String sql = "SELECT * FROM sighting WHERE id = :id";
+        String sql = "SELECT * FROM sightings WHERE id = :id";
         try(Connection con = DB.sql2o.open()) {
             Sightings sighting = con.createQuery(sql)
                     .addParameter("id", id)
@@ -90,7 +90,7 @@ public class Sightings implements AnimalInterface{
     @Override
     public void delete() {
         try(Connection con = DB.sql2o.open()) {
-            String sql = "DELETE FROM sighting WHERE id = :id";
+            String sql = "DELETE FROM sightings WHERE id = :id";
             con.createQuery(sql)
                     .addParameter("id", id)
                     .executeUpdate();

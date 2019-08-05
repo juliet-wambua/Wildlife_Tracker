@@ -5,7 +5,7 @@ import org.sql2o.Connection;
 import java.util.List;
 
 public class Animal extends AnimalsAbstract  {
-    private static final String ANIMAL_TYPE = "safe";
+    private static final String ANIMAL_TYPE = "Big5";
     public Animal(String name, String age, String health, String type){
 
         if (name.equals("")) {
@@ -26,7 +26,7 @@ public class Animal extends AnimalsAbstract  {
     @Override
     public void save(){
         try(Connection con = DB.sql2o.open()){
-            String sql = "INSERT INTO animal (name, age, health, type) VALUES (:name, :age, :health, :type);";
+            String sql = "INSERT INTO animals (name, age, health, type) VALUES (:name, :age, :health, :type);";
             this.id = (int) con.createQuery(sql, true)
                     .addParameter("name", this.name)
                     .addParameter("age", this.age)
@@ -48,7 +48,7 @@ public class Animal extends AnimalsAbstract  {
 
     }
     public static List<Animal> all(){
-        String sql = "SELECT * FROM animal WHERE type='Big5'";
+        String sql = "SELECT * FROM animals WHERE type='Big5'";
         try(Connection con = DB.sql2o.open()) {
             return con.createQuery(sql).executeAndFetch(Animal.class);
         }
