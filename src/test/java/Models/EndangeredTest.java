@@ -5,7 +5,7 @@ import org.junit.Before;
 
 import static org.junit.Assert.*;
 
-public class Endangered_AnimalsTest {
+public class EndangeredTest {
 
     @Before
     public void setUp() throws Exception {
