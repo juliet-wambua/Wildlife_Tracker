@@ -1,0 +1,90 @@
+{{#partial "content"}}
+<section class="dash">
+<h1>
+  <span>Wildlife tracker dashboard</span>
+  <a href="/"><-</a> </h1>
+  <section class="stats">
+
+      <div class="left-sec">
+        <h3>Tracked Animals</h3>
+        {{#each  allSightings}}
+            <div>
+              <p>Animal{{animal_name}} Spotted</p>
+              <p>Location: {{animal_location}}</p>
+              <p>By: Ranger {{ranger_name}}</p>
+            </div>
+        {{/each}}
+        <div>
+          <p>Rhino Spotted</p>
+          <p>Zone A</p>
+          <p>By: Ranger Cliff</p>
+        </div>
+      </div>
+
+      <div class="right-sec">
+        <div>
+          <p> <span class="track" data-value="486">486</span>K <br> Number of tracked animals </p>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <div>
+          <p> <span class="sick">5689</span>K <br> Number of sick animals rescued </p>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <div>
+          <p> <span class="money">100</span>K <br> Total amount saved by tracking </p>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <div class="graph">
+          <div class="graph1">TRACKED</div>
+          <div class="graph2">RESCUED</div>
+          <div class="graph3">SAVED</div>
+        </div>
+      </div>
+
+  </section>
+  <section class="recorded">
+    <h1 class="text-center"><span class="text-center">Recorded Animals</span></h1>
+
+    <div>
+        <h1><span>Normal</span></h1>
+       {{#each   allAnimals}}
+           <div>
+               <p>Name: {{animal_name}}</p>
+               <p>Id: 0{{id}}</p>
+           </div>
+       {{/each}}
+    </div>
+    <div>
+      <h1><span>Endangered</span></h1>
+        {{#each   allEndangered}}
+           <div>
+               <p>Name: {{animal_name}}</p>
+               <p>Health: {{animal_health}}</p>
+               <p>Age: {{animal_age}}</p>
+               <p>Id: 0{{id}}</p>
+           </div>
+       {{/each}}
+    </div>
+  </section>
+
+{{/partial}}
+
+{{#partial "script"}}
+        <script src="/js/jquery-3.4.0.min.js"></script>
+        <script src="/js/script.js"></script>
+{{/partial}}
+
+
+{{> layouts.hbs}}

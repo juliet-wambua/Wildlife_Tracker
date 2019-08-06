@@ -1,20 +1,33 @@
-{{#partial "styles"}}
-    <link rel='stylesheet' href='/css/index.css'>
-{{/partial}}
-
 {{#partial "content"}}
-    <div class="background">
+    <section id="home">
+        <section class="land-page" id="land">
+            <nav>
+                <a href="/">Home</a>
+                <a href="/new-animal">New Animal</a>
+                <a href="/dashboard">Dashboard</a>
+            </nav>
+            <h1>Wildlife Tracker</h1>
 
-    <div class=" ">
+            <p class="message">In the event of a sighting please record the Animal</p>
+            <form action="/new-sighting" method="post">
+                <select name="selectedAnimal" required>
+                    <option value="">Choose animal</option>
+                    <option value="1">Rhino</option>
+                    {{#each allAnimals}}
+                        <option value="{{id}}">{{animal_name}}</option>
+                    {{/each}}
+                    {{#each allEndangered}}
+                        <option value="{{id}}">{{animal_name}}</option>
+                    {{/each}}
 
-        <h1>Welcome to our Wildlife-Tracker website. </h1>
-        </div>
-        <hr>
+                </select>
+                <input type="text" name="location" id="" placeholder="Location" required>
+                <input type="text" name="ranger" id="" placeholder="Ranger Name" required>
+                <input type="submit" class="btn light">
+            </form>
 
-    <div class="button-all">
-        <a href="/form" class="btn btn-half">Record animal sighting</a>
-
-    </div>
-    </div>
+            <a href="/new_animal"></a>
+        </section>
+    </section>
 {{/partial}}
-{{>layout.hbs}}
+{{> layouts.hbs}}
