@@ -76,6 +76,15 @@ public class EndangeredTest {
     }
 
 
+    @Test
+    public void equals1() {
+    }
 
+    @Test
+    public void save() {
+    }
 
+    @Test
+    public void all() {
+    }
 }

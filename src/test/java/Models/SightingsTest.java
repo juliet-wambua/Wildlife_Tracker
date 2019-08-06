@@ -54,5 +54,39 @@ public class SightingsTest {
     }
 
 
+    @Test
+    public void getAnimalId() {
+    }
 
+    @Test
+    public void getId() {
+    }
+
+    @Test
+    public void getTimestamp() {
+    }
+
+    @Test
+    public void getAnimal() {
+    }
+
+    @Test
+    public void save() {
+    }
+
+    @Test
+    public void equals1() {
+    }
+
+    @Test
+    public void all() {
+    }
+
+    @Test
+    public void find() {
+    }
+
+    @Test
+    public void delete() {
+    }
 }

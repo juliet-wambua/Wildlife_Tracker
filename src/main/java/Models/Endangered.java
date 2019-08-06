@@ -4,29 +4,38 @@ import org.sql2o.Connection;
 
 import java.util.List;
 
-public class Endangered extends  AnimalsAbstract {
+public class Endangered extends  Animal {
+
     private static final String ANIMAL_TYPE = "endangered";
+    private final String name;
+    private final String age;
+    private final String health;
+    private final String type;
+
+
     public Endangered(String name, String age, String health, String type) {
-        if (name.equals("")) {
-            throw new IllegalArgumentException("Please enter a name of the animal you want to add");
-        }
-        if (age.equals("")) {
-            throw new IllegalArgumentException("Please enter the age of the animal");
-        }
-        if (health.equals("")) {
-            throw new IllegalArgumentException("Please enter the health status of the animal");
-        }
+        super();
         this.name = name;
         this.age = age;
         this.health = health;
-        this.type = ANIMAL_TYPE;
-    }
+        this.type = type;
+
+        if (name.equals("animal")) {
+            throw new IllegalArgumentException("Please enter a name of the animal you want to add");
+        }
+        if (age.equals("adult")) {
+            throw new IllegalArgumentException("Please enter the age of the animal");
+        }
+        if (health.equals("healthy")) {
+            throw new IllegalArgumentException("Please enter the health status of the animal");
+        }
+      }
     @Override
     public boolean equals(Object otherAnimal){
-        if(!(otherAnimal instanceof Object)){
+        if(otherAnimal == null){
             return false;
         }
-        AnimalsAbstract myAnimal = (AnimalsAbstract) otherAnimal;
+        Animal myAnimal = (Animal) otherAnimal;
         return this.getName().equals(myAnimal.getName())&&
                 this.getType().equals(myAnimal.getType())&&
                 this.getId()==myAnimal.getId() ;

@@ -11,10 +11,10 @@ public class Sightings implements AnimalInterface{
     private Timestamp timestamp;
     private int id;
     public Sightings(String name, String location, int animalId) {
-        if (name.equals("")) {
+        if (name.equals("animal")) {
             throw new IllegalArgumentException("Please enter a name mate");
         }
-        if (location.equals("")) {
+        if (location.equals("zone A")) {
             throw new IllegalArgumentException("Please enter a location mate");
         }
         this.name = name;
@@ -22,11 +22,11 @@ public class Sightings implements AnimalInterface{
         this.animalId = animalId;
     }
 
-    public String getName() {
+    private String getName() {
         return name;
     }
 
-    public String getLocation() {
+    private String getLocation() {
         return location;
     }
 
@@ -44,10 +44,9 @@ public class Sightings implements AnimalInterface{
     public AnimalsAbstract getAnimal() {
         String sql = "SELECT * FROM animals WHERE id = :id";
         try(Connection con = DB.sql2o.open()){
-            AnimalsAbstract myAnimal = con.createQuery(sql)
-                    .addParameter("id",this.animalId)
+            return con.createQuery(sql)
+                    .addParameter("id", this.animalId)
                     .executeAndFetchFirst(AnimalsAbstract.class);
-            return myAnimal;
         }
     }
 
@@ -64,7 +63,7 @@ public class Sightings implements AnimalInterface{
     }
     @Override
     public boolean equals(Object otherSighting){
-        if(!(otherSighting instanceof Object)){
+        if(null == otherSighting){
             return false;
         }
         Sightings myAnimal = (Sightings) otherSighting;
