@@ -50,6 +50,7 @@ nav>a:hover::after {
   min-height: 100vh;
 }
 .message{
+color:white;
   margin-top: 5%;
   margin-bottom: 1%;
   max-width: 100%;
@@ -57,7 +58,7 @@ nav>a:hover::after {
   position: relative;
   width: 70%;
   text-align: center;
-  font-family: 'Italianno', cursive;
+font-family: 'Alex Brush', cursive;
   font-size:1.8em;
 
 }

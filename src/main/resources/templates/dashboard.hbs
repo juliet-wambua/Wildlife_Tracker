@@ -1,8 +1,6 @@
-{{#partial "content"}}
+{{#partial "content"}}{{/partial}}
 <section class="dash">
-<h1>
-  <span>Wildlife tracker dashboard</span>
-  <a href="/"><-</a> </h1>
+<h1>Back <a href="/" class="redirect">Home</a></h1>
   <section class="stats">
 
       <div class="left-sec">
@@ -15,16 +13,13 @@
             </div>
         {{/each}}
        </div>
-      </div>
-
--      </div>-->
 
   </section>
   <section class="recorded">
     <h1 class="text-center"><span class="text-center"> Animals Sighted so Far</span></h1>
 
     <div class="recorded">
-        <h1><span>Normal</span></h1>
+        <h1><span>Normal</span>span></h1>
        {{#each   allAnimals}}
            <div>
                <p>Name: {{animal_name}}</p>
@@ -44,12 +39,6 @@
        {{/each}}
     </div>
   </section>
-
-{{/partial}}
-
-{{#partial "script"}}
-
-{{/partial}}
 
 
 {{> layouts.hbs}}
