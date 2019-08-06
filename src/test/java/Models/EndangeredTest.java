@@ -62,7 +62,7 @@ public class EndangeredTest {
     public void EndangeredAnimal_AnimalIsAssignedAnID_getId(){
         Endangered myEndangeredAnimal = new Endangered("Elephant", "adult", "healthy","endangered");
         myEndangeredAnimal.save();
-        Endangered testEndangeredAnimals = Endangered.all().get(0);
+        Endangered testEndangeredAnimals = (Endangered) Endangered.all().get(0);
         assertEquals(myEndangeredAnimal.getId(), testEndangeredAnimals.getId());
     }
     @Test

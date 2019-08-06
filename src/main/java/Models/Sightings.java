@@ -41,12 +41,12 @@ public class Sightings implements AnimalInterface{
     public Timestamp getTimestamp() {
         return timestamp;
     }
-    public AnimalsAbstract getAnimal() {
+    public Animal getAnimal() {
         String sql = "SELECT * FROM animals WHERE id = :id";
         try(Connection con = DB.sql2o.open()){
             return con.createQuery(sql)
                     .addParameter("id", this.animalId)
-                    .executeAndFetchFirst(AnimalsAbstract.class);
+                    .executeAndFetchFirst(Animal.class);
         }
     }
 

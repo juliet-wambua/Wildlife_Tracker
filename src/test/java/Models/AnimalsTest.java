@@ -78,7 +78,7 @@ public class AnimalsTest {
         assertTrue(Animal.all().get(0).equals(myAnimal1));
         assertTrue(Animal.all().get(1).equals(myAnimal2));
     }
-    //Animal is assigined an Id
+    //Animal is assigned an Id
     @Test
     public void animal_AnimalIsAssingnedAnID_getId(){
         Animal myAnimal = new Animal("puma","young","healthy","Big5");
