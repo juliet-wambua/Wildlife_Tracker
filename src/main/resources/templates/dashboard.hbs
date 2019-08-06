@@ -9,7 +9,7 @@
         <h3>Tracked Animals</h3>
         {{#each  allSightings}}
             <div>
-              <p>Animal{{animal_name}} Spotted</p>
+              <p>Animal Spotted: {{animal_name}}</p>
               <p>Location: {{animal_location}}</p>
               <p>By: Ranger {{ranger_name}}</p>
             </div>
@@ -21,9 +21,9 @@
 
   </section>
   <section class="recorded">
-    <h1 class="text-center"><span class="text-center">Recorded Animals</span></h1>
+    <h1 class="text-center"><span class="text-center"> Animals Sighted so Far</span></h1>
 
-    <div>
+    <div class="recorded">
         <h1><span>Normal</span></h1>
        {{#each   allAnimals}}
            <div>
@@ -48,8 +48,7 @@
 {{/partial}}
 
 {{#partial "script"}}
-        <script src="/js/jquery-3.4.0.min.js"></script>
-        <script src="/js/script.js"></script>
+
 {{/partial}}
 
 

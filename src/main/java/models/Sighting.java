@@ -24,7 +24,7 @@ public class Sighting {
         this.id = 0;
     }
     public static Sighting setUpSighting() {
-        return new Sighting(1, "Zone-A", "Cliff");
+        return new Sighting(1, "Zone-A", "Nea");
     }
 
     public int getId() {

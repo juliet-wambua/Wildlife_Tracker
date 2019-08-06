@@ -1,33 +1,35 @@
 {{#partial "content"}}
-    <section id="home">
-        <section class="land-page" id="land">
-            <nav>
-                <a href="/">Home</a>
-                <a href="/new-animal">New Animal</a>
-                <a href="/dashboard">Dashboard</a>
-            </nav>
-            <h1>Wildlife Tracker</h1>
+           <div class="col-md-6 id=home">
+               <section class="land-page" id="land">
+                   <nav>
+                       <a href="/">Home</a>
+                       <a href="/new-animal">New Animal</a>
+                       <a href="/dashboard">Dashboard</a>
+                   </nav>
+                   <h1>Wildlife Tracker</h1>
 
-            <p class="message">In the event of a sighting please record the Animal</p>
-            <form action="/new-sighting" method="post">
-                <select name="selectedAnimal" required>
-                    <option value="">Choose animal</option>
-                    <option value="1">Rhino</option>
-                    {{#each allAnimals}}
-                        <option value="{{id}}">{{animal_name}}</option>
-                    {{/each}}
-                    {{#each allEndangered}}
-                        <option value="{{id}}">{{animal_name}}</option>
-                    {{/each}}
+                   <p class="message">Wildlife tracker is an app that allows <br>one to record when they see an animal. <br>
+                       To record Endangered animal <br>click on New Animals.</p>
 
-                </select>
-                <input type="text" name="location" id="" placeholder="Location" required>
-                <input type="text" name="ranger" id="" placeholder="Ranger Name" required>
-                <input type="submit" class="btn light">
-            </form>
+                   <h2>Add animal</h2>
+                   <form action="/new-sighting" method="post">
+                       <select name="selectedAnimal" required>
+                           <option value="">Choose animal</option>
+                           <option value="1">Rhino</option>
+                           {{#each allAnimals}}
+                               <option value="{{id}}">{{animal_name}}</option>
+                           {{/each}}
+                           {{#each allEndangered}}
+                               <option value="{{id}}">{{animal_name}}</option>
+                           {{/each}}
+                       </select>
+                       <input type="text" name="location" id="" placeholder="Location" required>
+                       <input type="text" name="ranger" id="" placeholder="Ranger Name" required>
+                       <input type="submit" class="btn light">
+                   </form>
 
-            <a href="/new_animal"></a>
-        </section>
-    </section>
+                   <a href="/new_animal"></a>
+               </section>
+           </div>
 {{/partial}}
 {{> layouts.hbs}}

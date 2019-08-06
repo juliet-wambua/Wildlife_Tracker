@@ -1,0 +1,98 @@
+body{
+color:black;
+background-repeat: no-repeat;
+background-size:cover;
+background-image:url('/images/african all five.jpeg');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+nav, .home {
+  float: right;
+  padding: 20px 10px;
+}
+
+nav>a {
+  color:white;
+  font-size: 1.5em;
+  display: inline-block;
+  position: relative;
+  padding: 4px 20px;
+}
+
+nav>a::after {
+  content: "[";
+  font-size: 1.6em;
+  transition: all 0.3s ease;
+  position: absolute;
+  top: -6px;
+  left: 0%;
+}
+
+nav>a::after {
+  content: "]";
+}
+
+nav>a:hover {
+  color:green;
+}
+
+nav>a:hover::after {
+  left: 90%;
+}
+
+.land-page {
+  min-height: 100vh;
+}
+.message{
+  margin-top: 5%;
+  margin-bottom: 1%;
+  max-width: 100%;
+  padding: 30px;
+  position: relative;
+  width: 70%;
+  text-align: center;
+  font-family: 'Italianno', cursive;
+  font-size:1.8em;
+
+}
+
+
+a {
+  text-decoration: none;
+}
+.text-center{
+  width: 100%;
+  text-align: center;
+}
+.btn{
+  background: black;
+  padding: 10px 40px;
+  margin-top: 20px;
+  display: inline-block;
+  color:rgb(203, 73, 41);
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+.light{
+  color: white;
+  background:rgb(203, 73, 41);
+}
+.btn:hover{
+  background: rgba(255, 255, 255, 0.664);
+  color: black;
+  box-shadow: 0 0 10px rgb(136, 134, 134);
+}
+
+.dash{
+background-image:url('/images/gog.jpeg');
+background-repeat: no-repeat;
+background-size:cover;
+}
