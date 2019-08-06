@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'application'
 }
 
 apply plugin: 'application'
@@ -8,7 +9,7 @@ version '1.0-SNAPSHOT'
 
 mainClassName = "App"
 sourceCompatibility = 1.8
-
+applicationName = 'juliet-wildlife'
 
 repositories {
     mavenCentral()
@@ -21,3 +22,5 @@ dependencies {
     compile 'org.sql2o:sql2o:1.6.0'
     compile group: 'org.postgresql', name: 'postgresql', version: '42.2.2' // ADD ME FOR POSTGRES VERSION 10.x
 }
+defaultTasks = ['clean']
+task stage(dependsOn: ['clean', 'installDist'])
